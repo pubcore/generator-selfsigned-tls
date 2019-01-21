@@ -59,17 +59,17 @@ module.exports = class extends Generator {
 			['req', '-new', '-sha256', '-nodes', '-out',
 				this.destinationPath(`${domain}/server.csr`), '-newkey', 'rsa:2048',
 				'-keyout', `${domain}/server.key`, '-config',
-				this.destinationPath('server.csr.cnf')],
+				this.destinationPath(`${domain}/server.csr.cnf`)],
 			{stdio:'inherit'}
 		)
 		this.log('Create certificate file (server.crt)')
 		this.spawnCommandSync(
 			'openssl',
-			['x509', '-req', '-in', this.destinationPath('server.csr'),
+			['x509', '-req', '-in', this.destinationPath(`${domain}/server.csr`),
 				'-CA', this.destinationPath('rootCA.pem'), '-passin', 'pass:go4testing', '-CAkey',
 				this.destinationPath('rootCA.key'), '-CAcreateserial', '-out',
 				this.destinationPath(`${domain}/server.crt`), '-days', 500, '-sha256', '-extfile',
-				this.destinationPath('v3.ext')],
+				this.destinationPath(`${domain}/v3.ext`)],
 			{stdio:'inherit'}
 		)
 	}
