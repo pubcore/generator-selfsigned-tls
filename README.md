@@ -23,6 +23,7 @@ On shell, create a directory, change into and execute and define some domain:
 	yo @pubcore/selfsigned-tls
 
 On success, beside some other files, following is created:
+	
 	- rootCA.pem
 	- [domain]
 	  |
