@@ -36,10 +36,9 @@ On success, beside some other files, following is created:
 This two files needs to be plugged into your server(s). Please find corresponding server documentation how to enable https
 
 ##### rootCA.pem
-This root certificate needs to be attached to browser's certificate store.
+This root certificate can be attached to browser's/operating systems certificate store. There are options to add/trust on the fly, via options visible on warning page browser will show on first request.
 
 * On MacOS: Use keychain tool, Category "Certificates" (once added, it will be used by all browsers, not only Safari)
-* In general: google for "Manually installing root certificates" for your browser
 
 #### References
 https://en.wikipedia.org/wiki/Root_certificate
