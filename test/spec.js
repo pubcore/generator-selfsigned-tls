@@ -10,9 +10,9 @@ describe('my generator', () => {
 				domain:'test'
 			}).then(dir => {
 				ok(fs.existsSync(`${dir}/rootCA.pem`))
-				ok(fs.existsSync(`${dir}/server.csr`))
-				ok(fs.existsSync(`${dir}/server.crt`))
-				ok(fs.existsSync(`${dir}/server.key`))
+				ok(fs.existsSync(`${dir}/test/server.csr`))
+				ok(fs.existsSync(`${dir}/test/server.crt`))
+				ok(fs.existsSync(`${dir}/test/server.key`))
 			})
 	)
 })
