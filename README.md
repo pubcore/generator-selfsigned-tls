@@ -10,20 +10,16 @@ This yeoman generator creates this files with minimal input (domainname or IP ad
 * openssl command line client is installed
 * nodejs and npm in lates versions are installed
 
-#### Installation
-
-		npm i -g yo @pubcore/generator-selfsigned-tls
-
 #### Description
 If the working directory is empty, a root certificate will be generated. If root cert. (rootCA.pem and rootCA.key) already exists, it will be reused for other domains. Fore each domain a subfolder will be created containing domain specific config, key and cert files.
 
 #### Example
 On shell, create a directory, change into and execute and define some domain:
 
-	yo @pubcore/selfsigned-tls
+	npx -p yo -p @pubcore/generator-selfsigned-tls yo @pubcore/selfsigned-tls
 
 On success, beside some other files, following is created:
-	
+
 	- rootCA.pem
 	- [domain]
 	  |

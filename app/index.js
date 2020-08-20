@@ -1,9 +1,5 @@
 const Generator = require('yeoman-generator'),
-	updateNotifier = require('update-notifier'),
-	pkg = require('../package.json'),
 	fs = require('fs')
-
-updateNotifier({pkg}).notify()
 
 module.exports = class extends Generator {
 	constructor(args, opts) {

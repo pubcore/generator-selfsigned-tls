@@ -28,7 +28,6 @@
     "yeoman-test": "^2.7.0"
   },
   "dependencies": {
-    "update-notifier": "^4.1.0",
     "yeoman-generator": "^4.11.0"
   }
 }
