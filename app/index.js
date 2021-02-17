@@ -29,7 +29,7 @@ module.exports = class extends Generator {
 			this.spawnCommandSync(
 				'openssl',
 				['req', '-x509', '-new', '-passin', 'pass:go4testing', '-nodes', '-key',
-					this.destinationPath('rootCA.key'), '-sha256', '-days', '1024',
+					this.destinationPath('rootCA.key'), '-sha256', '-days', '3650',
 					'-out', this.destinationPath('rootCA.pem'), '-subj',
 					'/C=DE/ST=BW/L=Stuttgart/O=localDevUseOnly/OU=dev1/CN=localDevUseOnly/emailAddress=...'],
 				{stdio:'inherit'}
@@ -64,7 +64,7 @@ module.exports = class extends Generator {
 			['x509', '-req', '-in', this.destinationPath(`${domain}/server.csr`),
 				'-CA', this.destinationPath('rootCA.pem'), '-passin', 'pass:go4testing', '-CAkey',
 				this.destinationPath('rootCA.key'), '-CAcreateserial', '-out',
-				this.destinationPath(`${domain}/server.crt`), '-days', 500, '-sha256', '-extfile',
+				this.destinationPath(`${domain}/server.crt`), '-days', 3650, '-sha256', '-extfile',
 				this.destinationPath(`${domain}/v3.ext`)],
 			{stdio:'inherit'}
 		)
