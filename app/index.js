@@ -31,7 +31,7 @@ module.exports = class extends Generator {
 				['req', '-x509', '-new', '-passin', 'pass:go4testing', '-nodes', '-key',
 					this.destinationPath('rootCA.key'), '-sha256', '-days', '1024',
 					'-out', this.destinationPath('rootCA.pem'), '-subj',
-					'/C=DE/ST=BW/L=Stuttgart/O=.../OU=.../CN=.../emailAddress=...'],
+					'/C=DE/ST=BW/L=Stuttgart/O=localDevUseOnly/OU=dev1/CN=localDevUseOnly/emailAddress=...'],
 				{stdio:'inherit'}
 			)
 		}
