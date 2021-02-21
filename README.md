@@ -11,7 +11,9 @@ This yeoman generator creates this files with minimal input (domainname or IP ad
 * nodejs and npm in lates versions are installed
 
 #### Description
-If the working directory is empty, a root certificate will be generated. If root cert. (rootCA.pem and rootCA.key) already exists, it will be reused for other domains. Fore each domain a subfolder will be created containing domain specific config, key and cert files.
+If the working directory is empty, a root certificate will be generated. If root cert. (rootCA.pem and rootCA.key) already exists, it will be reused for other domains. Fore each domain a subfolder will be created containing domain specific config, key and cert files.  
+
+If called again for a given domain, only the server certificate will be created (==updated).
 
 #### Example
 On shell, create a directory, change into and execute and define some domain:

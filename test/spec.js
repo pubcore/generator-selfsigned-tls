@@ -7,7 +7,8 @@ describe('my generator', () => {
 	it('creates key files', () =>
 		helpers.run(path.join(__dirname, '../app'))
 			.withPrompts({
-				domain:'test'
+				domain:'test',
+				days: 100
 			}).then(dir => {
 				ok(fs.existsSync(`${dir}/rootCA.pem`))
 				ok(fs.existsSync(`${dir}/test/server.csr`))
