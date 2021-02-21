@@ -28,6 +28,6 @@
     "yeoman-test": "^2.7.0"
   },
   "dependencies": {
-    "yeoman-generator": "^4.11.0"
+    "yeoman-generator": "^4.13.0"
   }
 }
