@@ -9,11 +9,11 @@ describe('my generator', () => {
 			.withPrompts({
 				domain:'test',
 				days: 100
-			}).then(dir => {
-				ok(fs.existsSync(`${dir}/rootCA.pem`))
-				ok(fs.existsSync(`${dir}/test/server.csr`))
-				ok(fs.existsSync(`${dir}/test/server.crt`))
-				ok(fs.existsSync(`${dir}/test/server.key`))
+			}).then(({cwd}) => {
+				ok(fs.existsSync(`${cwd}/rootCA.pem`))
+				ok(fs.existsSync(`${cwd}/test/server.csr`))
+				ok(fs.existsSync(`${cwd}/test/server.crt`))
+				ok(fs.existsSync(`${cwd}/test/server.key`))
 			})
 	)
 })
